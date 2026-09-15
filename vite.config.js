@@ -28,6 +28,7 @@ export default defineConfig({
         auth: resolve(__dirname, 'auth.html'),
         map: resolve(__dirname, 'map.html'),
         portal: resolve(__dirname, 'portal.html'),
+        dashboard: resolve(__dirname, 'dashboard.html'),
       },
     },
   },
