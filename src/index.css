@@ -1,0 +1,10 @@
+html,body,#root{margin:0;padding:0;width:100%;min-width:320px;min-height:100%}
+body{
+  min-height:100vh;
+  background:#f5f7fb;
+  font-family: 'Inter', 'Noto Sans Devanagari', 'Hind', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

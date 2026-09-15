@@ -1,0 +1,84 @@
+{
+  "appName": "जल सेतु",
+  "appTagline": "जलसंभर निर्णय सहायता प्रणाली",
+  "govTag": "जलसंभर निगरानी एवं सत्यापन निदेशालय",
+  "systemStatus": {
+    "operational": "प्रणाली चालू है"
+  },
+  "notifications": {
+    "title": "निगरानी सूचनाएं",
+    "openReview": "अधिकारी समीक्षा खोलें"
+  },
+  "actions": {
+    "demoMode": "डेमो मोड में जारी रखें",
+    "save": "सहेजें",
+    "saveSettings": "सेटिंग्ज सहेजें",
+    "saved": "सहेजा गया ✓",
+    "settingsSaved": "सेटिंग्ज सहेजी गईं ✓",
+    "approve": "स्वीकृत करें",
+    "sendForReview": "समीक्षा हेतु भेजें",
+    "downloadPdf": "रिपोर्ट डाउनलोड करें / PDF",
+    "refreshPass": "उपग्रह पास रीफ्रेश करें",
+    "queryingStac": "STAC डेटा प्राप्त कर रहा है...",
+    "signIn": "साइन इन करें",
+    "createAccount": "खाता बनाएं",
+    "signOut": "साइन आउट करें",
+    "upload": "अपलोड करें",
+    "uploadPhoto": "स्थलीय साक्ष्य फोटो अपलोड करें",
+    "uploading": "अपलोड हो रहा है...",
+    "cancel": "रद्द करें",
+    "close": "बंद करें",
+    "search": "खोजें",
+    "resetFilters": "फ़िल्टर रीसेट करें",
+    "viewSatelliteAnalysis": "उपग्रह विश्लेषण देखें",
+    "compareBeforeAfter": "पहले / बाद तुलना करें",
+    "runAssessment": "साक्ष्य मूल्यांकन चलाएं",
+    "showHidePassword": "पासवर्ड दिखाएं/छुपाएं"
+  },
+  "priority": {
+    "high": "उच्च",
+    "medium": "मध्यम",
+    "low": "निम्न"
+  },
+  "status": {
+    "verified": "सत्यापित",
+    "needsReview": "समीक्षा आवश्यक",
+    "inconclusive": "अनिर्णित",
+    "pendingReview": "समीक्षा लंबित",
+    "pendingApproval": "स्वीकृति लंबित",
+    "approved": "स्वीकृत",
+    "sentForReview": "समीक्षा हेतु प्रेषित",
+    "active": "सक्रिय",
+    "underMonitoring": "निगरानी में",
+    "recorded": "दर्ज"
+  },
+  "labels": {
+    "area": "क्षेत्रफल",
+    "interventions": "संरचनाएं / कार्य",
+    "monitored": "निगरानी इकाइयां",
+    "rainfall": "वर्षा",
+    "confidence": "विश्वसनीयता",
+    "evidenceGap": "साक्ष्य अंतराल",
+    "change": "परिवर्तन",
+    "decision": "निर्णय",
+    "action": "कार्रवाई",
+    "state": "राज्य",
+    "district": "ज़िला",
+    "allStates": "सभी राज्य",
+    "allDistricts": "सभी ज़िले",
+    "baseline": "प्रारंभिक स्थिति",
+    "current": "वर्तमान स्थिति",
+    "delta": "अंतर (डेल्टा)",
+    "rank": "रैंक",
+    "date": "दिनांक",
+    "location": "स्थान",
+    "prototype": "प्रोटोटाइप",
+    "units": "इकाइयां",
+    "unit": "इकाई"
+  },
+  "languages": {
+    "en": "English",
+    "mr": "मराठी",
+    "hi": "हिंदी"
+  }
+}

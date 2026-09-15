@@ -1,0 +1,54 @@
+{
+  "title": "Reports",
+  "eyebrow": "OFFICIAL OUTPUT",
+  "subtitle": "Print-ready national monitoring report across active Indian watershed projects.",
+  "directorateHeader": "NATIONAL WATERSHED DECISION SUPPORT DIRECTORATE • INTER-STATE MONITORING",
+  "reportTitle": "WATERSHED MONITORING REPORT",
+  "summaryTitle": "Monitoring Summary",
+  "summaryText": "This report summarises watershed-level observations, temporal change, evidence assessment and recommended field action.",
+  "section1Title": "1. Watershed Monitoring Overview",
+  "section2Title": "2. Satellite Interpretation",
+  "section2Text": "NDVI represents vegetation condition, Water Index represents relative surface-water presence, and rainfall provides seasonal context.",
+  "section3Title": "3. Resolution Note",
+  "section3Text": "At 30 m resolution, small structures may not be directly resolvable. Surrounding vegetation, water and land-cover change should be combined with field and GIS evidence.",
+  "section4Title": "4. Recommended Field Visits",
+  "columns": {
+    "watershed": "Watershed",
+    "priority": "Priority",
+    "ndviChange": "NDVI Change",
+    "waterChange": "Water Change",
+    "changeLevel": "Change Level",
+    "confidence": "Confidence",
+    "rank": "Rank",
+    "evidenceGap": "Evidence Gap",
+    "requiredEvidence": "Required Field Evidence"
+  },
+  "settings": {
+    "title": "Settings",
+    "eyebrow": "SYSTEM",
+    "subtitle": "Operational jurisdiction and preferences for the Jal Setu monitoring portal.",
+    "primaryState": "Primary State Jurisdiction",
+    "district": "District Jurisdiction",
+    "showWarning": "Show prototype data warning",
+    "save": "Save Settings"
+  },
+  "help": {
+    "title": "Help & Guide",
+    "eyebrow": "PORTAL DOCUMENTATION",
+    "subtitle": "Clear operational guidelines on using Jal Setu for watershed monitoring.",
+    "qa": [
+      {
+        "q": "What is the primary objective of Jal Setu?",
+        "a": "Jal Setu combines satellite indicators, GIS catchment boundaries, and geo-tagged field evidence into transparent, explainable decisions for watershed conservation works."
+      },
+      {
+        "q": "How is the Temporal Change Analysis computed?",
+        "a": "It queries recent cloud-filtered Sentinel-2 passes (< 20% cloud) and computes zonal mean NDVI and NDWI over the watershed boundary polygon against baseline observations."
+      },
+      {
+        "q": "What is Evidence Fusion?",
+        "a": "It is a rule-based assessment that fuses field photos (30 pts), GPS metadata (25 pts), GIS location context (25 pts), and satellite change (20 pts) to categorize projects as Verified, Needs Review, or Inconclusive."
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "brand": {
+    "name": "जल सेतु",
+    "fullName": "जल सेतु • Jal Setu",
+    "portalTitle": "पाणलोट निर्णय समर्थन प्रणाली",
+    "portalSubtitle": "राष्ट्रीय पाणलोट क्षेत्र निरीक्षण व देखरेख पोर्टल",
+    "govOfIndia": "भारत सरकार",
+    "directorate": "राष्ट्रीय पाणलोट निर्णय समर्थन संचालनालय"
+  },
+  "menu": {
+    "dashboard": "डॅशबोर्ड",
+    "interactiveMap": "परस्परसंवादी नकाशा",
+    "watershedExplorer": "पाणलोट एक्सप्लोरर",
+    "fieldEvidence": "प्रत्यक्ष पुरावे",
+    "satelliteAnalysis": "उपग्रह विश्लेषण",
+    "beforeAfter": "पूर्वी / नंतर तुलना",
+    "evidenceAssessment": "पुरावा मूल्यांकन",
+    "fieldPlanner": "फील्ड प्लॅनर",
+    "officerReview": "अधिकारी आढावा",
+    "reports": "अहवाल",
+    "settings": "सेटिंग्ज",
+    "help": "मदत व मार्गदर्शक",
+    "signOut": "साइन आउट करा"
+  },
+  "header": {
+    "searchPlaceholder": "पाणलोट, जिल्हा किंवा राज्य शोधा...",
+    "selectLanguage": "भाषा",
+    "notifications": "सूचना",
+    "officerProfile": "अधिकारी प्रोफाइल",
+    "activeSession": "सक्रिय सत्र"
+  },
+  "roles": {
+    "projectOfficer": "प्रकल्प अधिकारी",
+    "fieldVerifier": "क्षेत्रीय निरीक्षक / पडताळणी अधिकारी",
+    "gisAnalyst": "GIS व उपग्रह विश्लेषक",
+    "districtOfficer": "जिल्हा पाणलोट अधिकारी",
+    "stateDirector": "राज्य संचालक"
+  }
+}

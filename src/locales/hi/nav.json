@@ -1,0 +1,39 @@
+{
+  "brand": {
+    "name": "जल सेतु",
+    "fullName": "जल सेतु • Jal Setu",
+    "portalTitle": "जलसंभर निर्णय सहायता प्रणाली",
+    "portalSubtitle": "राष्ट्रीय जलसंभर निगरानी एवं पर्यवेक्षण पोर्टल",
+    "govOfIndia": "भारत सरकार",
+    "directorate": "राष्ट्रीय जलसंभर निर्णय सहायता निदेशालय"
+  },
+  "menu": {
+    "dashboard": "डैशबोर्ड",
+    "interactiveMap": "इंटरैक्टिव मानचित्र",
+    "watershedExplorer": "जलसंभर एक्सप्लोरर",
+    "fieldEvidence": "स्थलीय साक्ष्य",
+    "satelliteAnalysis": "उपग्रह विश्लेषण",
+    "beforeAfter": "पहले / बाद तुलना",
+    "evidenceAssessment": "साक्ष्य मूल्यांकन",
+    "fieldPlanner": "फील्ड प्लानर",
+    "officerReview": "अधिकारी समीक्षा",
+    "reports": "रिपोर्ट",
+    "settings": "सेटिंग्ज",
+    "help": "सहायता एवं मार्गदर्शिका",
+    "signOut": "साइन आउट करें"
+  },
+  "header": {
+    "searchPlaceholder": "जलसंभर, ज़िला या राज्य खोजें...",
+    "selectLanguage": "भाषा",
+    "notifications": "सूचनाएं",
+    "officerProfile": "अधिकारी प्रोफ़ाइल",
+    "activeSession": "सक्रिय सत्र"
+  },
+  "roles": {
+    "projectOfficer": "परियोजना अधिकारी",
+    "fieldVerifier": "क्षेत्रीय निरीक्षक / सत्यापनकर्ता",
+    "gisAnalyst": "जीआईएस एवं उपग्रह विश्लेषक",
+    "districtOfficer": "ज़िला जलसंभर अधिकारी",
+    "stateDirector": "राज्य निदेशक"
+  }
+}

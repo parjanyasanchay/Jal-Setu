@@ -1,0 +1,84 @@
+{
+  "appName": "जल सेतू",
+  "appTagline": "पाणलोट निर्णय समर्थन प्रणाली",
+  "govTag": "पाणलोट देखरेख व पडताळणी संचालनालय",
+  "systemStatus": {
+    "operational": "प्रणाली कार्यरत आहे"
+  },
+  "notifications": {
+    "title": "निरीक्षण सूचना",
+    "openReview": "अधिकारी पुनरावलोकन उघडा"
+  },
+  "actions": {
+    "demoMode": "डेमो मोडमध्ये पुढे जा",
+    "save": "जतन करा",
+    "saveSettings": "सेटिंग्ज जतन करा",
+    "saved": "जतन केले ✓",
+    "settingsSaved": "सेटिंग्ज जतन केल्या ✓",
+    "approve": "मंजूर करा",
+    "sendForReview": "पुनरावलोकनासाठी पाठवा",
+    "downloadPdf": "अहवाल डाउनलोड करा / PDF",
+    "refreshPass": "उपग्रह पास रिफ्रेश करा",
+    "queryingStac": "STAC माहिती आणत आहे...",
+    "signIn": "साइन इन करा",
+    "createAccount": "खाते तयार करा",
+    "signOut": "साइन आउट करा",
+    "upload": "अपलोड करा",
+    "uploadPhoto": "प्रत्यक्ष पुरावा फोटो अपलोड करा",
+    "uploading": "अपलोड होत आहे...",
+    "cancel": "रद्द करा",
+    "close": "बंद करा",
+    "search": "शोधा",
+    "resetFilters": "फिल्टर रीसेट करा",
+    "viewSatelliteAnalysis": "उपग्रह विश्लेषण पहा",
+    "compareBeforeAfter": "पूर्वी / नंतर तुलना करा",
+    "runAssessment": "पुरावा मूल्यांकन चालवा",
+    "showHidePassword": "पासवर्ड दाखवा/लपवा"
+  },
+  "priority": {
+    "high": "उच्च",
+    "medium": "मध्यम",
+    "low": "कमी"
+  },
+  "status": {
+    "verified": "सत्यापित",
+    "needsReview": "पुनरावलोकन आवश्यक",
+    "inconclusive": "अनिर्णित",
+    "pendingReview": "पुनरावलोकन प्रलंबित",
+    "pendingApproval": "मंजुरी प्रलंबित",
+    "approved": "मंजूर",
+    "sentForReview": "पुनरावलोकनासाठी पाठवले",
+    "active": "सक्रिय",
+    "underMonitoring": "निरीक्षणाखाली",
+    "recorded": "नोंदवले"
+  },
+  "labels": {
+    "area": "क्षेत्रफळ",
+    "interventions": "उपाययोजना / बंधारे",
+    "monitored": "निरीक्षित घटक",
+    "rainfall": "पर्जन्यमान",
+    "confidence": "विश्वासार्हता",
+    "evidenceGap": "पुरावा तूट",
+    "change": "बदल",
+    "decision": "निर्णय",
+    "action": "कृती",
+    "state": "राज्य",
+    "district": "जिल्हा",
+    "allStates": "सर्व राज्ये",
+    "allDistricts": "सर्व जिल्हे",
+    "baseline": "मूळ स्थिती",
+    "current": "सध्याची स्थिती",
+    "delta": "तफावत (डेल्टा)",
+    "rank": "क्रमांक",
+    "date": "तारीख",
+    "location": "स्थान",
+    "prototype": "प्रोटोटाइप",
+    "units": "घटक",
+    "unit": "घटक"
+  },
+  "languages": {
+    "en": "English",
+    "mr": "मराठी",
+    "hi": "हिंदी"
+  }
+}

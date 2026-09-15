@@ -1,0 +1,84 @@
+{
+  "appName": "Jal Setu",
+  "appTagline": "Watershed Decision Support System",
+  "govTag": "Watershed Surveillance & Verification Directorate",
+  "systemStatus": {
+    "operational": "System operational"
+  },
+  "notifications": {
+    "title": "Monitoring notifications",
+    "openReview": "Open Officer Review"
+  },
+  "actions": {
+    "demoMode": "Continue in Demo Mode",
+    "save": "Save",
+    "saveSettings": "Save Settings",
+    "saved": "Saved ✓",
+    "settingsSaved": "Settings Saved ✓",
+    "approve": "Approve",
+    "sendForReview": "Send for Review",
+    "downloadPdf": "Download / Save PDF",
+    "refreshPass": "Refresh Pass",
+    "queryingStac": "Querying STAC...",
+    "signIn": "Sign In",
+    "createAccount": "Create Account",
+    "signOut": "Sign Out",
+    "upload": "Upload",
+    "uploadPhoto": "Upload Field Evidence",
+    "uploading": "Uploading...",
+    "cancel": "Cancel",
+    "close": "Close",
+    "search": "Search",
+    "resetFilters": "Reset Filters",
+    "viewSatelliteAnalysis": "View Satellite Analysis",
+    "compareBeforeAfter": "Compare Before / After",
+    "runAssessment": "Run Evidence Fusion",
+    "showHidePassword": "Show/Hide password"
+  },
+  "priority": {
+    "high": "HIGH",
+    "medium": "MEDIUM",
+    "low": "LOW"
+  },
+  "status": {
+    "verified": "Verified",
+    "needsReview": "Needs Review",
+    "inconclusive": "Inconclusive",
+    "pendingReview": "Pending Review",
+    "pendingApproval": "Pending Approval",
+    "approved": "Approved",
+    "sentForReview": "Sent for Review",
+    "active": "Active",
+    "underMonitoring": "Under Monitoring",
+    "recorded": "Recorded"
+  },
+  "labels": {
+    "area": "Area",
+    "interventions": "Interventions",
+    "monitored": "Monitored",
+    "rainfall": "Rainfall",
+    "confidence": "Confidence",
+    "evidenceGap": "Evidence Gap",
+    "change": "Change",
+    "decision": "Decision",
+    "action": "Action",
+    "state": "State",
+    "district": "District",
+    "allStates": "All States",
+    "allDistricts": "All Districts",
+    "baseline": "Baseline",
+    "current": "Current",
+    "delta": "Delta",
+    "rank": "Rank",
+    "date": "Date",
+    "location": "Location",
+    "prototype": "Prototype",
+    "units": "Units",
+    "unit": "Unit"
+  },
+  "languages": {
+    "en": "English",
+    "mr": "मराठी",
+    "hi": "हिंदी"
+  }
+}

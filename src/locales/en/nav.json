@@ -1,0 +1,39 @@
+{
+  "brand": {
+    "name": "JAL SETU",
+    "fullName": "Jal Setu • जल सेतु",
+    "portalTitle": "Watershed Decision Support System",
+    "portalSubtitle": "National Catchment Monitoring & Surveillance Portal",
+    "govOfIndia": "Government of India",
+    "directorate": "National Watershed Decision Support Directorate"
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "interactiveMap": "Interactive Map",
+    "watershedExplorer": "Watershed Explorer",
+    "fieldEvidence": "Field Evidence",
+    "satelliteAnalysis": "Satellite Analysis",
+    "beforeAfter": "Before / After",
+    "evidenceAssessment": "Evidence Assessment",
+    "fieldPlanner": "Field Planner",
+    "officerReview": "Officer Review",
+    "reports": "Reports",
+    "settings": "Settings",
+    "help": "Help & Guide",
+    "signOut": "Sign Out"
+  },
+  "header": {
+    "searchPlaceholder": "Search watershed, district, or state...",
+    "selectLanguage": "Language",
+    "notifications": "Notifications",
+    "officerProfile": "Officer Profile",
+    "activeSession": "Active Session"
+  },
+  "roles": {
+    "projectOfficer": "Project Officer",
+    "fieldVerifier": "Field Verifier / Inspector",
+    "gisAnalyst": "GIS & Satellite Analyst",
+    "districtOfficer": "District Watershed Officer",
+    "stateDirector": "State Director"
+  }
+}
