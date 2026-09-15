@@ -24,6 +24,7 @@ import {
   Search,
   Settings,
   ShieldCheck,
+  TrendingUp,
   Upload,
   X,
 } from "lucide-react";
@@ -48,6 +49,7 @@ import farmerImg from "./assets/farmer.jpg";
 import { getEvidence, uploadEvidence, getStoredUser, clearStoredSession, getTemporalComparison } from "./api";
 import AuthPage from "./AuthPage";
 import SatelliteAnalysis from "./components/SatelliteAnalysis";
+import TrendIndicatorAnalysis from "./components/TrendIndicatorAnalysis";
 import AskJalSetuChatbot from "./components/AskJalSetuChatbot";
 
 const BHUVAN_URL =
@@ -655,6 +657,7 @@ const menuItems = [
   ["Field Evidence", Camera, "fieldEvidence"],
   ["Satellite Analysis", Satellite, "satelliteAnalysis"],
   ["Before / After", Activity, "temporalComparison"],
+  ["Trend and Indicator Analysis", TrendingUp, "trendAnalysis"],
   ["Evidence Assessment", ShieldCheck, "evidenceAssessment"],
   ["Adaptive Survey Planner", ClipboardCheck, "surveyPlanner"],
   ["Officer Review", CheckCircle2, "officerReview"],
@@ -2451,7 +2454,7 @@ function OfficerReview({ currentUser }) {
   );
 }
 
-function Reports() {
+function Reports({ setPage }) {
   const { t, i18n } = useTranslation(["reports", "watershed", "common"]);
   const today = "12 Sep 2026";
 
@@ -2582,6 +2585,23 @@ function Reports() {
                 ))}
             </tbody>
           </table>
+        </section>
+
+        <section className="report-section">
+          <h3>5. Multi-Date Satellite Trend & Indicator Observations</h3>
+          <p>
+            Quantitative trends from Copernicus Sentinel-2 L2A (10m) indicate progressive vegetative and surface-water changes across monitoring units.
+            <em> Supporting evidence only — not proof of causality.</em>
+          </p>
+          <div style={{ marginTop: "0.75rem" }}>
+            <button
+              type="button"
+              className="secondary-btn"
+              onClick={() => setPage && setPage("Trend and Indicator Analysis")}
+            >
+              <TrendingUp size={15} /> View Multi-Temporal Trend Charts
+            </button>
+          </div>
         </section>
 
         <footer className="report-footer">
@@ -2723,6 +2743,7 @@ function getPageTitle(page, t) {
     "Field Evidence": t("nav:menu.fieldEvidence", "Field Evidence"),
     "Satellite Analysis": t("nav:menu.satelliteAnalysis", "Satellite Analysis"),
     "Before / After": t("nav:menu.temporalComparison", "Before / After Comparison"),
+    "Trend and Indicator Analysis": t("nav:menu.trendAnalysis", "Trend and Indicator Analysis"),
     "Evidence Assessment": t("nav:menu.evidenceAssessment", "Evidence Assessment"),
     "Adaptive Survey Planner": t("nav:menu.surveyPlanner", "Adaptive Survey Planner"),
     "Officer Review": t("nav:menu.officerReview", "Officer Review"),
@@ -2812,6 +2833,15 @@ export default function App() {
         />
       );
     }
+    if (activePage === "Trend and Indicator Analysis") {
+      return (
+        <TrendIndicatorAnalysis
+          setPage={handlePageChange}
+          initialWatershedId={pageParams.watershedId || activeWatershedId}
+          watersheds={watersheds}
+        />
+      );
+    }
     if (activePage === "Evidence Assessment") {
       return (
         <EvidenceAssessment
@@ -2823,7 +2853,7 @@ export default function App() {
     }
     if (activePage === "Adaptive Survey Planner") return <AdaptiveSurveyPlanner />;
     if (activePage === "Officer Review") return <OfficerReview currentUser={currentUser} />;
-    if (activePage === "Reports") return <Reports />;
+    if (activePage === "Reports") return <Reports setPage={handlePageChange} />;
     if (activePage === "Settings") return <SettingsPage />;
     return <HelpPage />;
   }

@@ -56,6 +56,40 @@ export async function getTemporalComparison(watershedId) {
   return request(`${API_URL}/api/watershed/${encodeURIComponent(watershedId)}/temporal-comparison`);
 }
 
+export async function getAnalysisTrends({
+  watershedId,
+  indicator = "ndvi",
+  startDate,
+  endDate,
+  season = "ALL",
+  interventionType = "ALL",
+} = {}) {
+  const params = new URLSearchParams();
+  if (watershedId) params.append("watershed_id", watershedId);
+  if (indicator) params.append("indicator", indicator);
+  if (startDate) params.append("start_date", startDate);
+  if (endDate) params.append("end_date", endDate);
+  if (season && season !== "ALL") params.append("season", season);
+  if (interventionType && interventionType !== "ALL") {
+    params.append("intervention_type", interventionType);
+  }
+  return request(`${API_URL}/api/analysis/trends?${params.toString()}`);
+}
+
+export async function getAnalysisSummary({
+  watershedId,
+  interventionType = "ALL",
+  season = "ALL",
+} = {}) {
+  const params = new URLSearchParams();
+  if (watershedId) params.append("watershed_id", watershedId);
+  if (interventionType && interventionType !== "ALL") {
+    params.append("intervention_type", interventionType);
+  }
+  if (season && season !== "ALL") params.append("season", season);
+  return request(`${API_URL}/api/analysis/summary?${params.toString()}`);
+}
+
 export async function getEvidence() {
   return request(`${API_URL}/api/evidence`);
 }

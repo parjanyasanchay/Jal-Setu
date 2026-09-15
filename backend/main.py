@@ -9,6 +9,7 @@ from database import Base, engine, SessionLocal
 from models import Watershed, Evidence, User
 from satellite_service import get_temporal_comparison
 from chat_service import process_chat
+from analysis_service import get_trend_analysis, get_indicator_summary
 from init_db import init_database
 from pydantic import BaseModel
 from typing import Optional
@@ -463,6 +464,48 @@ def chat_endpoint(data: ChatRequest):
             watershed_id=data.watershed_id,
             intervention_id=data.intervention_id,
             language=data.language or "English"
+        )
+    finally:
+        db.close()
+
+
+@app.get("/api/analysis/trends")
+def analysis_trends(
+    watershed_id: Optional[str] = None,
+    indicator: Optional[str] = "ndvi",
+    start_date: Optional[str] = None,
+    end_date: Optional[str] = None,
+    season: Optional[str] = "ALL",
+    intervention_type: Optional[str] = "ALL"
+):
+    db = SessionLocal()
+    try:
+        return get_trend_analysis(
+            db=db,
+            watershed_id=watershed_id,
+            indicator=indicator or "ndvi",
+            start_date=start_date,
+            end_date=end_date,
+            season=season or "ALL",
+            intervention_type=intervention_type or "ALL"
+        )
+    finally:
+        db.close()
+
+
+@app.get("/api/analysis/summary")
+def analysis_summary(
+    watershed_id: Optional[str] = None,
+    intervention_type: Optional[str] = "ALL",
+    season: Optional[str] = "ALL"
+):
+    db = SessionLocal()
+    try:
+        return get_indicator_summary(
+            db=db,
+            watershed_id=watershed_id,
+            intervention_type=intervention_type or "ALL",
+            season=season or "ALL"
         )
     finally:
         db.close()
