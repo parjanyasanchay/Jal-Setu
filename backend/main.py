@@ -464,6 +464,9 @@ def chat_endpoint(data: ChatRequest):
             intervention_id=data.intervention_id,
             language=data.language or "English"
         )
+    finally:
+        db.close()
+
 
 # Fallback handler to serve root-level static assets (e.g., /farmer.jpg, /auth-bg.jpg, leaflet markers) and SPA routing
 @app.get("/{file_name:path}", include_in_schema=False)
