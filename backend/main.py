@@ -464,8 +464,20 @@ def chat_endpoint(data: ChatRequest):
             intervention_id=data.intervention_id,
             language=data.language or "English"
         )
-    finally:
-        db.close()
+
+# Fallback handler to serve root-level static assets (e.g., /farmer.jpg, /auth-bg.jpg, leaflet markers) and SPA routing
+@app.get("/{file_name:path}", include_in_schema=False)
+def serve_root_static(file_name: str):
+    if os.path.exists(DIST_DIR):
+        clean_name = os.path.normpath(file_name).lstrip("/\\")
+        candidate = os.path.join(DIST_DIR, clean_name)
+        if os.path.isfile(candidate):
+            return FileResponse(candidate)
+        # SPA client fallback for non-API routes
+        index_file = os.path.join(DIST_DIR, "index.html")
+        if os.path.isfile(index_file) and not clean_name.startswith("api/"):
+            return FileResponse(index_file)
+    raise HTTPException(status_code=404, detail="Not Found")
 
 
 if __name__ == "__main__":

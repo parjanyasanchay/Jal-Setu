@@ -17,6 +17,7 @@ import {
   macroCatchmentBasins,
   watershedMarkersData,
 } from "../data/watershedGisData";
+import { createWatershedPin } from "../utils/leafletIcons";
 import {
   Layers,
   MapPin,
@@ -31,58 +32,9 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-// Create custom SVG markers for watershed checkpoints
+// Create custom SVG markers for watershed checkpoints with guaranteed visibility
 function createWatershedIcon(priority, status) {
-  let bgColor = "#0284c7"; // Blue
-  let borderColor = "#ffffff";
-  if (status === "Verified") {
-    bgColor = "#16a34a"; // Green
-  } else if (status === "Action Needed") {
-    bgColor = "#dc2626"; // Red
-  } else if (priority === "HIGH") {
-    bgColor = "#ea580c"; // Orange
-  }
-
-  const html = `
-    <div style="
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      background: ${bgColor};
-      color: #fff;
-      border: 2px solid ${borderColor};
-      border-radius: 50%;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.35);
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    ">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
-        <circle cx="12" cy="10" r="3"/>
-      </svg>
-      <span style="
-        position: absolute;
-        top: -3px;
-        right: -3px;
-        width: 8px;
-        height: 8px;
-        background: #fff;
-        border-radius: 50%;
-        box-shadow: 0 0 4px rgba(0,0,0,0.5);
-      "></span>
-    </div>
-  `;
-
-  return L.divIcon({
-    html: html,
-    className: "custom-watershed-pin",
-    iconSize: [28, 28],
-    iconAnchor: [14, 28],
-    popupAnchor: [0, -28],
-  });
+  return createWatershedPin({ priority, status, size: 28 });
 }
 
 function MapViewController({ center, zoom }) {

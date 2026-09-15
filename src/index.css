@@ -6,5 +6,16 @@ body{
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+/* Leaflet Custom Marker Styling across all pages */
+.custom-watershed-pin,
+.leaflet-div-icon.custom-watershed-pin {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
 }
 
+.watershed-pin-container:hover {
+  transform: scale(1.18) translateY(-3px);
+  z-index: 1000;
+}

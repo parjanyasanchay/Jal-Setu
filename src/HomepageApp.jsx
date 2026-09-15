@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import IndiaWatershedMapComponent from "./components/IndiaWatershedMapComponent";
+import farmerImg from "./assets/farmer.jpg";
 import "./home.css";
 import {
   MapPin,
@@ -244,7 +245,7 @@ export default function HomepageApp() {
             {/* Farmer Photo Container: Wide rectangular crop with rounded corners, farmer on right */}
             <div className="farmer-photo-frame">
               <img
-                src="/farmer.jpg"
+                src={farmerImg}
                 alt="Indian farmer cultivating agricultural paddy field in sustainable watershed"
                 className="farmer-photo-img"
               />

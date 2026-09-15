@@ -43,6 +43,8 @@ import "./App.css";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 import { formatNumber, formatDecimal, formatPercent, formatDelta } from "./utils/formatters";
+import { createWatershedPin } from "./utils/leafletIcons";
+import farmerImg from "./assets/farmer.jpg";
 import { getEvidence, uploadEvidence, getStoredUser, clearStoredSession, getTemporalComparison } from "./api";
 import AuthPage from "./AuthPage";
 import SatelliteAnalysis from "./components/SatelliteAnalysis";
@@ -774,7 +776,7 @@ function Dashboard({ setPage }) {
           </button>
         </div>
 
-        <img src="/farmer.jpg" alt="Farmer working in an agricultural field" />
+        <img src={farmerImg} alt="Farmer working in an agricultural field" />
 
         <div className="hero-orbit">
           <div />
@@ -1102,7 +1104,11 @@ function IndiaMap() {
 
             {layers.watershed &&
               filteredWatersheds.map((w) => (
-                <Marker key={`${w.id}-marker`} position={[w.lat, w.lng]}>
+                <Marker
+                  key={`${w.id}-marker`}
+                  position={[w.lat, w.lng]}
+                  icon={createWatershedPin({ priority: w.priority, status: w.status, size: 28 })}
+                >
                   <Popup>
                     <strong>{w.name}</strong>
                     <br />

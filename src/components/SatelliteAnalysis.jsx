@@ -36,6 +36,7 @@ import {
   useMap
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import { createWatershedPin } from "../utils/leafletIcons";
 
 import {
   WATERSHED_CENTROIDS,
@@ -853,7 +854,14 @@ export default function SatelliteAnalysis({
             )}
 
             {/* Watershed Center Location Marker */}
-            <Marker position={[selectedWatershed.lat, selectedWatershed.lng]}>
+            <Marker
+              position={[selectedWatershed.lat, selectedWatershed.lng]}
+              icon={createWatershedPin({
+                priority: selectedWatershed.priority,
+                status: selectedWatershed.status,
+                size: 30,
+              })}
+            >
               <Popup>
                 <strong>{selectedWatershed.name}</strong>
                 <br />
